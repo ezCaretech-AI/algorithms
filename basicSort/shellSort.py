@@ -1,7 +1,8 @@
 ## 김영섭
 
-def shellSort(a, n):
+def shellSort(a):
     h = 1
+    n = len(a)-1
     while h < n:  ## 첫번째 간격 계산
         h = 3 * h + 1
 
