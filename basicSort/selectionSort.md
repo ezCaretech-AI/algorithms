@@ -1,4 +1,4 @@
-## 선택정렬(Selection sort)
+## 선택정렬(Selection Sort)
 #### 특징 
 - 정렬되지 않은 전체 자료 중에서 해당 위치에 맞는 자료를 선택하여 위치 교환하는 정렬 방식
 - 비교 연산 및 이동 연산 횟수가 고정된 값 => 연산 횟수 측면에서 정렬기법 중 최악
@@ -29,10 +29,10 @@
 #### 코드 및 개념 도식화
 - 검색 시작시점은 배열 인덱스 0부터, 진행순서에 따라 시작시점 인덱스 1씩 증가 
 
-![Screenshot](selection-sort.png)
+![Screenshot](/imgs/selection-sort.png)
 
 
-![Screenshot](selectionsort_python.png)
+![Screenshot](/imgs/selectionsort_python.png)
 
 #### Time Complexity
 - O(N^2)
