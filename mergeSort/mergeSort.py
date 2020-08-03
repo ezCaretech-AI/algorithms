@@ -1,13 +1,13 @@
 from mergeSort import merge
 
-def mergeSort(arr):
-    if len(arr) <= 1:
-        return arr
-    mid = len(arr) // 2
-    leftArray = arr[:mid]
-    rightArray = arr[mid:]
-    arr[:mid] = mergeSort(leftArray)
-    arr[mid:] = mergeSort(rightArray)
-    arr[:] = merge.merge(arr[:mid], arr[mid:])
-    # print(arr)
-    return arr
+def mergeSort(input_array):
+    if len(input_array) <= 1:
+        return input_array
+    mid = len(input_array) // 2
+    leftArray = input_array[:mid]
+    rightArray = input_array[mid:]
+    input_array[:mid] = mergeSort(leftArray)
+    input_array[mid:] = mergeSort(rightArray)
+    input_array[:] = merge.merge(input_array[:mid], input_array[mid:])
+    # print(input_array)
+    return input_array

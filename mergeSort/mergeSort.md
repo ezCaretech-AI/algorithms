@@ -3,42 +3,54 @@
 
 
 ## 1. 합병 정렬이란?
-a[] 라는 배열이 있을 때, 이를 부분 배열 S[]와 U[]로 나눈다. \
-S[]의 경우 정렬이 완료된 배열이고, U[]의 경우 아직 정렬되지 않은 배열을 의미한다. \
-초기에 a[0]이 S[] 배열에 포함되고 a[1:]은 U[] 배열에 속한다. \
-매 단계에서 U배열의 가장 왼쪽에 위치한 원소(U[0])를 S배열에 삽입하며 U배열이 비워질 때까지 반복하는 정렬 방법이다.
+배열을 두개로 쪼개어 각각 정렬하고 합치는 정렬이다. \
+예를 들어 리스트 A = [6, 2, 8, 1, 3, 9] 가 있을 때, \
+L = [6, 2, 8] 과 R = [1, 3, 9] 로 나눈다. 그리고 각각의 리스트를 정렬한다. \
+L = [2, 6, 8] 과 R = [1, 3, 9] 정렬된 두 리스트를 합친다. \
+S = [1]  <span style='color:green'>← min(L[0], R[0])</span> \
+S = [1, 2] <span style='color:green'> ← min(L[1], R[0])</span> \
+S = [1, 2, 3] <span style='color:green'> ← min(L[1], R[1])</span> \
+S = [1, 2, 3, 6] <span style='color:green'> ← min(L[1], R[2])</span> \
+S = [1, 2, 3, 6, 8] <span style='color:green'> ← min(L[2], R[2])</span> \
+S = [1, 2, 3, 6, 8, 9] <span style='color:green'> ← R[2]</span>
+
+
+
 
 ## 2. 합병 정렬 그림
-![Alt text](/imgs/insertionsort_002.png)
+![Alt text](/imgs/mergesort.png)
 
 
 ## 3. 합병 정렬 수도 코드
-```
-insertionSort(a[], n)
-    for (i ← 2; i ≤ n; i ← i+1) do {
-        v ← a[i];
-        j ← i;
-        while (a[j-1] > v) do {
-            a[j] ← a[j-1];
-            j ← j-1;
-        }
-        A[j] ← v;
-    }
-end insertionSort()
+```c++
+mergeSort(a[]){
+    mid = len(a)/2
+    leftArray = a[:mid]
+    rightArray = a[mid:]
+    mergeSort(leftArray)
+    mergeSort(rightArray)
+    a = merge(leftArray, rightArray)
+}
+
+merge(left[], right[]){
+    정렬된 두 배열 left[]와 right[]를 합병
+    정렬된 하나의 배열을 리턴한다.
+}
 ```
 ## 4. 합병 정렬 추가적인 특징들
 ### 4.1 공간 / 시간 복잡도
 >공간 복잡도
-> > 최선 : O(1) \
+> > 최선 : O(N) \
 최악 : O(N)
 
 >시간 복잡도
-> >  최선 : O(𝑁) \
-최악 : O(𝑁^2) \
-평균 : O(𝑁^2)
+> >  최선 : O(𝑁logN) \
+최악 : O(𝑁logN) \
+평균 : O(𝑁logN)
 
-### 4.2 사용되는 경우
-> 삽입 정렬은 필요할 때에 한해서 삽입을 진행하기 때문에 데이터가 **이미 거의 정렬된 상태**에서 어떤 알고리즘 보다 빠름
+### 4.2 장단점
+> **장점** : 안정적으로 준수한 시간 내에 정렬한다. \
+**단점** : 추가적인 메모리가 필요하다. 배열의 크기가 클 경우 부담이 될 수 있다.
 
 ### 4.3 합병 정렬 애니메이션
 ![합병 정렬](/imgs/mergesort_move.gif)
