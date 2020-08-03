@@ -1,7 +1,7 @@
-def checkSort(a, n):
+def checkSort(a):
     isSorted=True
-    for i in range(1, n):
-        if (a[i] > a[i+1]):
+    for i in range(1, len(a)):
+        if (a[i-1] > a[i]):
             isSorted = False
         if (not isSorted):
             break

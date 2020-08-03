@@ -35,15 +35,15 @@
 
 #### 코드 및 개념 도식화
 
-![Screenshot](/imgs_quicksort/quicksort_2.png)
+![Screenshot](/imgs/imgs_quicksort/quicksort_2.png)
 
 - 일반적인 경우
-![Screenshot](/imgs_quicksort/quicksort_python_1.png)
+![Screenshot](/imgs/imgs_quicksort/quicksort_python_1.png)
 
 
 - inplace sorting 방식의 파이썬 코드
 
-![Screenshot](/imgs_quicksort/quicksort_python_2.png)
+![Screenshot](/imgs/imgs_quicksort/quicksort_python_2.png)
 
 - 리스트의 정 가운데 있는 값을 pivot 값을 선택
 - left : 정렬 대상의 가장 왼쪽 지점을 가리키는 이름
@@ -54,13 +54,13 @@
 
 #### 시간 복잡도
 
-![Screenshot](/imgs_quicksort/time_complexity.png)
+![Screenshot](/imgs/imgs_quicksort/time_complexity.png)
 
 #### 최선의 경우
 - O(nlog2n) = 순환 호출 깊이(log2n) x 마지막 부분 배열 개수(n)
 - 각 순환 호출에서 전체 리스트 대부분 레코드를 비교해야 하므로 평균 n번 비교 수행 
 
-![Screenshot](/imgs_quicksort/quicksort_best.png)
+![Screenshot](/imgs/imgs_quicksort/quicksort_best.png)
 
 #### 평균의 경우
 - O(nlog2n)
@@ -71,7 +71,7 @@
 - 분할 시 값들이 한 편으로 크게(모두) 치우친 경우
 - 특히 이미 정렬된 리스트에 대하여 퀵 정렬을 실행할 경우
 
-![Screenshot](/imgs_quicksort/quicksort_worst.png)
+![Screenshot](/imgs/imgs_quicksort/quicksort_worst.png)
 
 #### 공간 복잡도
 - 데이터 복제가 필요없는 inplace 알고리즘
