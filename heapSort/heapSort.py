@@ -17,4 +17,6 @@ def heapSort(input_array):
     for i in range(n - 1, 0, -1):
         input_array[0], input_array[i] = input_array[i], input_array[0]
         heapify.heapify(input_array, 0, i)
-    return input_array
+    return input_array 
+
+    
