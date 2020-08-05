@@ -3,7 +3,11 @@
 
 
 ## 1. 힙 정렬이란?
-
+- 최대 힙 트리나 최소 힙 트리를 구성해 정렬을 하는 방법
+- 과정 설명 \
+    1. 정렬해야 할 n개의 요소들로 최대 힙을 만든다.
+    2. 그 다음으로 한 번에 하나씩 요소를 힙에서 꺼내서 배열의 뒤부터 저장
+    3. 삭제되는 요소들은 값이 감소되는 순서로 정렬되게 됨
 
 ## 2. 힙 정렬 그림
 ![Alt text](/imgs/heapsort1.png)
@@ -12,11 +16,23 @@
 
 ## 3. 힙 정렬 수도 코드
 ```python
-for (i ← 1; i ≤ n; i ← i+1) do
-    insrtHeap(heap, a[i]);
+heapSort(a[]){
+    n ← a.length - 1
+    for (i ← n/2; i ≥ 1; i ← i-1) do
+        heapify(a, i, n)
+    for (i ← n-1; i ≥ 1; i ← i-1) do
+        a[1] ↔ a[i+1]
+        heapify(a, 1, i)
+}
+heapify(a[], h, m){
+    v ← a[h]
+    for (j ← 2*h; j ≤ m; j ← j*2) do
+        if (j < m and a[j] < a[j+1]) then j ← j+1
+        if (v ≥ a[j]) then exit
+        else a[j/2] ← a[j]
+    a[j/2] ← v
+}
 
-for (i ← n; i ≥ 1; i ← i-1) do
-    a[i] ← deleteHeap(heap)
 ```
 
 ## 3-1.  힙 정렬 코드
