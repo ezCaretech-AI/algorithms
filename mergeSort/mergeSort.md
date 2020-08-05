@@ -22,7 +22,7 @@ S = [1, 2, 3, 6, 8, 9] <span style='color:green'> ← R[2]</span>
 
 
 ## 3. 합병 정렬 수도 코드
-```c++
+```python
 mergeSort(a[]){
     mid = len(a)/2
     leftArray = a[:mid]

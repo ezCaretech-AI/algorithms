@@ -11,7 +11,7 @@
 
 
 ## 3. 힙 정렬 수도 코드
-```
+```python
 for (i ← 1; i ≤ n; i ← i+1) do
     insrtHeap(heap, a[i]);
 
