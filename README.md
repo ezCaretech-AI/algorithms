@@ -39,6 +39,7 @@
     > T<sub>a</sub> = T<sub>c</sub> + T<sub>e</sub>
     - T<sub>c</sub> : 컴파일 시간 (고정적)
     - T<sub>e</sub> : 실행 시간 ← 점근적 표기법 사용 (O, Θ, Ω)
+    ![Alt text](/imgs/time_analysis.png)
     > $$ O(1) < O(logN) < O(N) < O(NlogN) < O(N^2) < O(N^3) < O(2^N) < O(N!) $$
     ![Alt text](/imgs/bigOgraph.png)
 
