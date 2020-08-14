@@ -17,3 +17,16 @@
 ## 3. 탐색 순서도
 
 ![Alt text](/imgs/sequential_search.JPG)
+
+### 3. 복잡도
+
+> [1, 12, 8, 7, 2, 11, 5, 81, 29, 10]
+
+* 1을 탐색하면 1번만에 찾고,  
+12를 탐색하면 2번  
+8은 3번,  
+10은 10번의 탐색을 해야 함.
+
+![Alt text](/imgs/sequential_search1.JPG)
+
+> 시간복잡도는 : O(n)
