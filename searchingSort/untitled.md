@@ -16,4 +16,4 @@
 
 ## 3. 탐색 순서도
 
-![Alt text](/imgs/sequential_search.png)
+![Alt text](/imgs/sequential_search.JPG)
