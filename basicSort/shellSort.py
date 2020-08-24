@@ -1,17 +1,23 @@
 ## 김영섭
 
-def shellSort(a):
-    h = 1
-    n = len(a)-1
-    while h < n:  ## 첫번째 간격 계산
-        h = 3 * h + 1
+def insertionSort_ASC(arr, first, last, h):
+    i = first + h
+    
+    while i<= last:
+        val = arr[i]
+        pos = i
+        while pos > first and arr[pos-h] > val:
+            arr[pos] = arr[pos-h]
+            pos = pos - h
+        arr[pos] = val
+        i = i + h
 
+def shellSort(arr):
+    n = len(arr)
+    h = n//2
     while h > 0:
-        for i in range(h + 1, n + 1):
-            v, j = a[i], i  ## v: value, j: index
-            #             print(v,j,h,a[j-h])
-            while j > h and a[j - h] > v:  ## 앞의 값 a[j-h]와 뒤의 값(v) 비교
-                a[j] = a[j - h]  ## 값 교환
-                j = j - h
-            a[j] = v
-        h = int(h / 3)  ## 간격 재 조정
+        for i in range(0, h):
+            insertionSort_ASC(arr, i, n-1, h)
+        h //= 2
+        
+    return arr
