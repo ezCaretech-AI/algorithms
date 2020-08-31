@@ -4,15 +4,15 @@ class node:
     def __init__(self, key=None):
         self.key = key
 
-class SequentialSearch:
+class sequentialSearch:
     def __init__(self):
-        SequentialSearch.a = []
+        sequentialSearch.a = []
     
     def sequentialSearch(self, search_key):
         i = 0
-        n = len(SequentialSearch.a)
+        n = len(sequentialSearch.a)
                 
-        while i < n and SequentialSearch.a[i].key != search_key:
+        while i < n and sequentialSearch.a[i].key != search_key:
             i = i + 1
         
         if i == n:
@@ -21,11 +21,11 @@ class SequentialSearch:
             return i
     
     def insert(self, v):
-        SequentialSearch.a.append(node(v))
+        sequentialSearch.a.append(node(v))
         
     def run(self, key, searchValue):
         
-        d = SequentialSearch()
+        d = sequentialSearch()
         N = len(key)
 #         s_key = random.sample(range(0, N), N)
                 

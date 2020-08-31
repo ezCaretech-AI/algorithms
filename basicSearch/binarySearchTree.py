@@ -5,7 +5,7 @@ class tree_node:
         self.left = left
         self.right = right
 
-class BinarySearchTree:
+class binarySearchTree:
 
     z = tree_node(key=0, left=0, right=0)
     z.left = z
@@ -42,7 +42,7 @@ class BinarySearchTree:
     
     def run(self, key, searchValue):
         
-        d = BinarySearchTree()
+        d = binarySearchTree()
         N = len(key)
         
         for i in range(N):
