@@ -237,49 +237,7 @@ class RedBlackTree():
     # and return the corresponding node
     def searchTree(self, k):
         return self.__search_tree_helper(self.root, k)
-
-    # find the node with the minimum key
-    def minimum(self, node):
-        while node.left != self.TNULL:
-            node = node.left
-        return node
-
-    # find the node with the maximum key
-    def maximum(self, node):
-        while node.right != self.TNULL:
-            node = node.right
-        return node
-
-    # find the successor of a given node
-    def successor(self, x):
-        # if the right subtree is not None,
-        # the successor is the leftmost node in the
-        # right subtree
-        if x.right != self.TNULL:
-            return self.minimum(x.right)
-
-        # else it is the lowest ancestor of x whose
-        # left child is also an ancestor of x.
-        y = x.parent
-        while y != self.TNULL and x == y.right:
-            x = y
-            y = y.parent
-        return y
-
-    # find the predecessor of a given node
-    def predecessor(self,  x):
-        # if the left subtree is not None,
-        # the predecessor is the rightmost node in the 
-        # left subtree
-        if (x.left != self.TNULL):
-            return self.maximum(x.left)
-
-        y = x.parent
-        while y != self.TNULL and x == y.left:
-            x = y
-            y = y.parent
-
-        return y
+    
 
     # rotate left at node x
     def left_rotate(self, x):
