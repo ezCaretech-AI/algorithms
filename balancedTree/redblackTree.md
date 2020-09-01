@@ -1,7 +1,9 @@
+ ![Alt text](/imgs/RedBlackTree.png)
+
 # Red-Black Tree란,
 - 이진 탐색 트리의 단점을 보완하기 위해 만들어진 균형 트리 중 하나
 - 균형 트리 중 2-3-4 트리의 단점을 극복하기 위해 제안됨
-- 
+ ![Alt text](/imgs/binaryProblem.png) 
 
 
 # 1. Red-Black Tree 생성시 원칙
@@ -31,9 +33,25 @@
  2. 무조건 가운데 있는 값을 부모로 만들고 나머지 둘을 자식으로 만든다.
 
  3. 올라간 가운데 있는 값을 검정(Black)으로 만들고 그 두자식들을 빨강(Red)로 만든다. 
+   
+![Alt text](/imgs/redblack3.png)
+
+![Alt text](/imgs/redblack4.png)
 
 ## 2-2. w가 빨강(Red)일 땐 Recoloring
 ### ● Recoloring
  1. 현재 inset된 노드(z)의 부모와 그 형제(w)를 검정(Black)으로 하고 Grand Parent(내 부모의 부모)를 빨강(Red)로 한다.
 
  2. Grand Parent(내 부모의 부모)가 Root node가 아니었을 시 Double Red가 다시 발생 할 수 있다.
+
+![Alt text](/imgs/redblack2.png)
+
+# 3. 예시
+
+![Alt text](/imgs/redblackmove.gif)
+
+# 4. 시간 복잡도
+> $O(logN)$
+
+# 5. 사용되는 곳
+> 대부분 언어의 map, multimap, multiset에서 사용됨
