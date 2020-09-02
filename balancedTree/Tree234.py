@@ -195,7 +195,6 @@ class Tree234:
 
 		result = d.find(searchValue)
 		
-
 		# if result == -1 or key[result] != searchValue: 
 		if result == -1:	
 			print("탐색오류")

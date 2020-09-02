@@ -38,17 +38,16 @@ class RedBlackTree():
             sys.stdout.write(node.data + " ")
 
     def __search_tree_helper(self, node, key):
-        # try:
-        #     if node == TNULL:
-        #         return node
-        # except:
-        #     pass 
-        if key == node.data:
-            return node
+        try:
+            if key == node.data:
+                return node
 
-        if key < node.data:
-            return self.__search_tree_helper(node.left, key)
-        return self.__search_tree_helper(node.right, key)
+            if key < node.data:
+                
+                return self.__search_tree_helper(node.left, key)
+            return self.__search_tree_helper(node.right, key)
+        except:
+            return -1
 
     # fix the rb tree modified by the delete operation
     def __fix_delete(self, x):
