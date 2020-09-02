@@ -169,20 +169,21 @@ class Tree234:
 		else:	#end for 	#we're greater, so
 			return pNode.getChild(j + 1)	#return right child
 
-	# def displayTree(self):
-	# 	self.recDisplayTree(self._pRoot, 0, 0)
 
-	# def recDisplayTree(self, pThisNode, level, childNumber):
-	# 	print('level=', level, 'child=', childNumber)
-	# 	pThisNode.displayNode()
+	def displayTree(self):
+		self.recDisplayTree(self._pRoot, 0, 0)
 
-	# 	numItems = pThisNode.getNumItems()
-	# 	for j in range(numItems+1):
-	# 		pNextNode = pThisNode.getChild(j)
-	# 		if pNextNode:
-	# 			self.recDisplayTree(pNextNode, level+1, j)
-	# 		else:
-	# 			return
+	def recDisplayTree(self, pThisNode, level, childNumber):
+		print('level=', level, 'child=', childNumber)
+		pThisNode.displayNode()
+
+		numItems = pThisNode.getNumItems()
+		for j in range(numItems+1):
+			pNextNode = pThisNode.getChild(j)
+			if pNextNode:
+				self.recDisplayTree(pNextNode, level+1, j)
+			else:
+				return
 
 	def run(self, key, searchValue): 
 
@@ -192,8 +193,9 @@ class Tree234:
 		for i in key: 
 			d.insert(i)
 
-		for i in range(N): 
-			result = d.find(searchValue)
+		result = d.find(searchValue)
+		
 
-		if result == -1 or key[result] != searchValue: 
+		# if result == -1 or key[result] != searchValue: 
+		if result == -1:	
 			print("탐색오류")
