@@ -160,6 +160,12 @@ class RedBlackTree():
         if y_original_color == 0:
             self.__fix_delete(x)
     
+    # find the node with the minimum key
+    def minimum(self, node):
+        while node.left != self.TNULL:
+            node = node.left
+        return node
+
     # fix the red-black tree
     def  __fix_insert(self, k):
         while k.parent.color == 1:
