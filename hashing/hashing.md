@@ -11,7 +11,7 @@
 
 ### 2. 구성요소
 
-![Alt text](/imgs/hashing.JPG)
+![Alt text](/imgs/hashing/hashing.JPG)
 
 * Hash Table    : Key - Value 쌍에서 Key 값을 테이블에 저장할 때, Key 값을 함수를 이용해 계산을 수행한 후, 그 결과 값을 배열의 인덱스로 사용하여 저장하는 방식.  
 * Hash Function : Key 값을 계산하는 함수, 키 값을 테이블 주소로 변환하는 함수, 0에서 m(배열의 크기) - 1 사이의 값을 출력  
@@ -29,7 +29,7 @@
 * h(k)(인덱스) = k(key) % M(전체 테이블 크기)  
 * 해시테이블 크기가 정해진다는 단점이 존재.
 
-![Alt text](/imgs/division.JPG)
+![Alt text](/imgs/hasing/division.JPG)
 
 #### 3.2. 곱셈법(multiplication method) 
 
@@ -51,7 +51,7 @@
 * 어떤 해시 함수가 서로 다른 두 입력에 대해 동일한 출력 값을 나타내는 경우.  
 * 해시 함수에 입력할 수 있는 데이터의 가짓수는 무한한데, 출력으로 나올 수 있는 해시 값이 유한하기 때문에 발생.
 
-![Alt text](/imgs/search/hashcollision.JPG)
+![Alt text](/imgs/hashing/hashcollision.JPG)
 
 -----------------------------
 
@@ -64,4 +64,4 @@
 * 장점 : 다른 방법에 비해 원소의 삽입과 삭제가 용이
 * 단점 : 포인터 저장을 위한 기억공간이 필요하며, 기억장소 할당이 동적으로 이루어져야 한다.
 
-![Alt text](/imgs/search/chaining.JPG)
+![Alt text](/imgs/hashing/chaining.JPG)
