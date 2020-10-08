@@ -20,6 +20,7 @@
 ## 5. 시간 복잡도
 > O(# bits in a key)
 
+ Link: [다양한 알고리즘 ppt 링크][insertionSortlink]
 
+[insertionSortlink]: http://inside.mines.edu/~dmehta/FDS_CPP/PPT/index.shtml "Go google"
 
-http://inside.mines.edu/~dmehta/FDS_CPP/PPT/index.shtml
