@@ -15,7 +15,7 @@ class node:
         self.left=None
         self.right=None
 
-class Dict:
+class digitalSearch:
     
     maxb = 20
     itemMin = bitskey(0)
@@ -66,7 +66,7 @@ class Dict:
             p.left=x
 
     def run(self, key, searchValue):
-        d = Dict()
+        d = digitalSearch()
         for i in range(len(key)):
             d.insert(key[i])
         
